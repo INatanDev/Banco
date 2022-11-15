@@ -1,7 +1,6 @@
 package Application;
 
 import Entities.Account;
-import Entities.BusinessAccount;
 import Entities.SavingsAccount;
 
 public class Program {
@@ -28,7 +27,7 @@ public class Program {
 		 * 
 		 * if(acc3 instanceof SavingsAccount) { SavingsAccount acc5 =
 		 * (SavingsAccount)acc3; acc5.updateBalance(); System.out.println("Update!"); }
-		 */
+		 
 		
 		Account acc1 = new Account(1001, "Alex", 1000.0);
 		acc1.withdraw(200.0);
@@ -41,5 +40,16 @@ public class Program {
 		Account acc3 = new BusinessAccount(1003, "Roberta", 1000.0, 500.0);
 		acc3.withdraw(200.0);
 		System.out.println(acc3.getBalance());
+		
+		*/
+		
+		Account x = new Account(1004, "Rebeca", 1000.0);
+		Account y = new SavingsAccount(1005, "Luiz", 1000.0, 0.01);
+		
+		x.withdraw(50.0);
+		y.withdraw(50.0);
+		
+		System.out.println(x.getBalance());
+		System.out.println(y.getBalance());
 	}
 }
